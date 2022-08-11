@@ -3,7 +3,7 @@ package SortingStudent;
 import java.util.Arrays;
 
 public class Mentor extends Person{
-    private Student[] students;
+    Student[] students = new Student[10];
     private int indexOfStudent = 0;
 
     public Mentor(String name, int age) {
