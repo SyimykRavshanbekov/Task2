@@ -1,7 +1,7 @@
 package SortingStudent;
 
 public class Student extends Person{
-    public Student(String name) {
+    Student(String name) {
         super(name);
     }
     public void explain(){

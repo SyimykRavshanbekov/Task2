@@ -12,34 +12,6 @@ public class Main {
         allMethods(namesArray, students, mentors);
 
     }
-    /*static void addNames(String[] names, Student[] studentsArray){
-        for (int i = 0; i < studentsArray.length; i++) {
-            Student student = new Student(names[i]);
-            studentsArray[i] = student;
-        }
-    }
-    static void sortingStudent(Student[] studentsArr, Mentor[] mentorsArray){
-        Random rd = new Random();
-        for (int i = 0, counter = 0; i < studentsArr.length; i++) {
-            if (i==10){
-                i=0;
-            }
-            int num = rd.nextInt(0, 4);
-            if (mentorsArray[num].students[i] == null) {
-                mentorsArray[num].addStudents(studentsArr[counter]);
-                counter++;
-            }
-
-            if (counter==40){
-                break;
-            }
-        }
-    }
-    static void returnInformation(Mentor[] mentors) {
-        for (Mentor mentor : mentors) {
-            mentor.getStudentsName();
-        }
-    }*/
     static void allMethods(String[] names, Student[] studentsArray, Mentor[] mentors){
         Random rd = new Random();
         for (int i = 0; i < studentsArray.length; i++) {
