@@ -59,73 +59,32 @@ public class Main {
         Mentor mentor4 = new Mentor("Mukhamed", 20);
         Mentor[] mentors = {mentor1, mentor2, mentor3, mentor4};
 
+
+        int counter = 0;
         for (int i = 0; i < studentsArray.length; i++) {
-            mentors[rd.nextInt(0,4)].addStudents(studentsArray[i]);
+            if (i==10){
+                i=0;
+            }
+                int num = rd.nextInt(0, 4);
+                if (mentors[num].students[i] == null) {
+                    mentors[num].addStudents(studentsArray[counter]);
+                    counter++;
+                }
+
+                if (counter==40){
+                    break;
+                }
         }
 
-        System.out.println(mentor1.students[1].toString());
+
+        for (int i = 0; i < mentors.length; i++) {
+            System.out.println("--------"+mentors[i].getName()+"----------------");
+            mentors[i].getStudentsName();
+            System.out.println();
+        }
 
 
-//        Student[] studentPart1 = new Student[10];
-//        int[] usedNumbers = new int[40];
-//        int num = 0;
-//        for (int i = 0; i < usedNumbers.length; i++) {
-//            usedNumbers[i] = rd.nextInt(0, 40);
-//        }
-//
-//        for (int i = 0; i < usedNumbers.length-30; i++) {
-//            studentsArray[usedNumbers[i]] = studentPart1[i];
-//        }
-//
-//        System.out.println(Arrays.toString(usedNumbers));
-//
 
-
-//        int number = 0;
-//        for (int i = 0; i < 10; i++) {
-//            number = rd.nextInt(0, 40);
-//            for (int j = 0; j < studentsArray.length-1; j++) {
-//                if (number != usedNumbers[j]){
-//                    mentor1.addStudents(studentsArray[number]);
-//                }
-//            }
-//            usedNumbers[i] = number;
-//        }
-//
-//
-//        for (int i = 0; i < 10; i++) {
-//            number = rd.nextInt(0, 40);
-//            for (int j = 0; j < studentsArray.length; j++) {
-//                if (number != usedNumbers[j]){
-//                    mentor2.addStudents(studentsArray[number]);
-//                }
-//            }
-//            usedNumbers[i] = number;
-//        }
-//
-//        for (int i = 0; i < 10; i++) {
-//            number = rd.nextInt(0, 40);
-//            for (int j = 0; j < studentsArray.length; j++) {
-//                if (number != usedNumbers[j]){
-//                    mentor3.addStudents(studentsArray[number]);
-//                }
-//            }
-//            usedNumbers[i] = number;
-//        }
-//
-//        for (int i = 0; i < 10; i++) {
-//            number = rd.nextInt(0, 40);
-//            for (int j = 0; j < studentsArray.length; j++) {
-//                if (number != usedNumbers[j]){
-//                    mentor4.addStudents(studentsArray[number]);
-//                }
-//            }
-//            usedNumbers[i] = number;
-//        }
-
-
-//        System.out.println("-------------MENTOR1------------------");
-//        System.out.println(mentor1);
 
     }
 }

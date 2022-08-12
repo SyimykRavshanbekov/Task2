@@ -8,8 +8,5 @@ public class Student extends Person{
         System.out.println("OOP is object oriented programming");
     }
 
-    @Override
-    public String toString() {
-        return "Student: " + super.toString();
-    }
+
 }
