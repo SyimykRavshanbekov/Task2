@@ -1,19 +1,19 @@
 package Practice15;
 
 public class Cirle {
-    static int PI;
+    static double PI;
 
-    public void setPI(int PI) {
+    public void setPI(double PI) {
         Cirle.PI = PI;
     }
 
     public void area(int radius, int radius2){
-        int num = PI*(radius*radius2);
-        System.out.printf("%d * (%d * %d) = %d", PI, radius, radius2, num);
+        double num = PI*(radius*radius2);
+        System.out.printf("%f * (%d * %d) = %f", PI, radius, radius2, num);
     }
 
     public void circumference(int R){
-      int num = 2*PI*R;
-        System.out.printf("2 * %d * %d = %d", PI, R, num);
+      double num = 2*PI*R;
+        System.out.printf("2 * %f * %d = %f", PI, R, num);
     }
 }
